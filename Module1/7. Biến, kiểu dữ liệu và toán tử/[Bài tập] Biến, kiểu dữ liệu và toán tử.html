@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Biến, kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+<button onclick="diemTrungBinh()">Bài 1</button>
+<button onclick="chuyenDoiNhietDo()">Bài 2</button>
+<button onclick="dienTichHinhTron()">Bài 3</button>
+<button onclick="chuViHinhTron()">Bài 4</button>
+<script>
+    function diemTrungBinh()
+    {
+        var diemVatLy = Number(prompt('Nhập điểm Vật Lý: '))
+        var diemHoaHoc = Number(prompt('Nhập điểm Hóa Học: '))
+        var diemSinhHoc = Number(prompt('Nhập điểm Sinh học: '))
+        alert("Điểm trung bình: " + (diemVatLy + diemHoaHoc + diemSinhHoc )/3)
+    }
+    function chuyenDoiNhietDo()
+    {
+        var doC = Number(prompt('Nhập nhiệt độ (oC): '))
+        alert('Nhiệt độ là: '+ (((doC*9)/5)+32) +'oF')
+    }
+    function dienTichHinhTron()
+    {
+        var r = Number(prompt('Bán kính: '))
+        alert('Diện tích hình tròn là: ' + r*r*3.14)
+    }
+    function chuViHinhTron()
+    {
+        var r = Number(prompt('Bán kính: '))
+        alert('Chu vi hình tròn là: ' + 2*r*3.14)
+    }
+</script>
+</body>
+</html>

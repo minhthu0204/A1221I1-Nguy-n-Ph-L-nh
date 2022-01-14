@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Ứng dụng chuyển đổi tiền tệ</title>
+    <style>
+        .haha{
+            float: left;
+            margin: 0px 20px 0px 20px;
+            text-align:center ;
+        }
+    </style>
+</head>
+<body>
+<div class="haha">
+    <h3 >Amout</h3>
+    <input type="text" id="solieu" style="width: 140px; height: 24px">
+</div>
+<div class="haha">
+    <h3>From Currency</h3>
+    <select id="select1" style="width: 120px; height: 30px">
+        <option value="a">VietNam</option>
+        <option value="b">USD</option>
+    </select>
+</div>
+<div class="haha">
+    <h3>To Currency</h3>
+    <select id="select2" style="width: 120px; height: 30px">
+        <option value="a">VietNam</option>
+        <option value="b">USD</option>
+    </select>
+    <br>
+</div  >
+<div class="haha" style="margin-top: 60px">
+    <button onclick="haha()" style="width: 120px; height: 30px; color:#fff; background-color:#6610f2 ">Convert</button>
+</div>
+    <p id="hihi" style="clear: both"></p>
+<script>
+    function haha()
+    {
+        var x = Number(document.getElementById("solieu").value)
+        var a = document.getElementById("select1").value
+        var b = document.getElementById("select2").value
+        if(a==b && b=="b" )
+        {
+            document.getElementById("hihi").innerText= 'Result: ' + x + ' USD'
+
+        }
+        if(a==b && b=="a" )
+        {
+            document.getElementById("hihi").innerText= 'Result: ' + x + ' VND'
+            console.log(new Array(5).toString());
+        }
+        if(a=="a" && b=="b")
+        {
+            document.getElementById("hihi").innerText= 'Result: ' + x/24000 + ' USD'
+        }
+        if(a=="b" && b=="a")
+        {
+            document.getElementById("hihi").innerText='Result: ' +  x*24000 + ' VND'
+        }
+
+    }
+</script>
+</body>
+</html>
