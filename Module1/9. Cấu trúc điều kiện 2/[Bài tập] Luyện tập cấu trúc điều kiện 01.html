@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 1" onclick="divisibilityTest()">
+<input type="button" value="Bài 2" onclick="ageConditional()">
+<input type="button" value="Bài 3" onclick="numberComparison()">
+<input type="button" value="Bài 4" onclick="comparison()">
+<input type="button" value="Bài 5" onclick="bai5">
+<input type="button" value="Bài 6" onclick="bai6">
+<input type="button" value="Bài 7" onclick="bai7">
+<script>
+    function comparison()
+    {
+        let a = Number(prompt('Nhap vao a: '))
+        let b = Number(prompt('Nhap vao b: '))
+        let c = Number(prompt('Nhap vao c: '))
+         max = a
+        if(b>max){
+            max = b
+        }
+        else {
+            if (c>max){
+                max = c
+            }
+        }
+        alert('Gia tri lon nhat la: ' +max)
+    }
+    function numberComparison()
+    {
+        let a = Number(prompt('Nhap vao so bat ky: '))
+        if (a>0)
+        {
+            alert('So lon hon khong')
+        }
+        else if (a==0) {
+            alert('So bang khong')
+        }
+        else
+        {
+            alert('So nho hon khong')
+        }
+    }
+    function ageConditional()
+    {
+        let a = Number(prompt('Nhap vao tuoi cua ban: '))
+        if(a>=16)
+        {
+            alert('Ban du dieu kien hoc lop 10')
+        }
+        else
+        {
+            alert('Ban khong du dieu kien hoc lop 10')
+        }
+    }
+    function divisibilityTest()
+    {
+        let a = Number(prompt('Nhap vao a: '))
+        let b = Number(prompt('Nhap vao b: '))
+        if(a%b==0)
+        {
+            alert('a chia het cho b')
+        }
+        else
+        {
+            alert('a khong chia het cho b')
+        }
+    }
+    function  bai5(){
+        alert('Đề không rõ ràng, không đủ input')
+    }
+    function  bai6(){
+        alert('Đề không rõ ràng, không đủ input')
+    }
+    function  bai7(){
+        alert('Đề không rõ ràng, không đủ input')
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            margin: 10px auto;
+            width: 200px;
+
+        }
+        .keyBoard{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        #kq{
+            width: 191px;
+        }
+
+    </style>
+    <script>
+        var x=""
+        function a(id){
+            return document.getElementById(id)
+        }
+        function setNum(num)
+        {
+            x+= num
+            a('kq').value=x
+        }
+        function xoa()
+        {
+            x=''
+            a('kq').value=x
+        }
+        function ketqua(){
+            a('kq').value=eval(a('kq').value)
+            x=a('kq').value
+        }
+
+    </script>
+</head>
+<body>
+<div>
+    <div class="container">
+        <input type="text" id="kq">
+        <div class="keyBoard">
+            <input type="button" value="1" onclick="setNum(this.value)">
+            <input type="button" value="2" onclick="setNum(this.value)">
+            <input type="button" value="3" onclick="setNum(this.value)">
+            <input type="button" value="+" onclick="setNum(this.value)">
+            <input type="button" value="4" onclick="setNum(this.value)">
+            <input type="button" value="5" onclick="setNum(this.value)">
+            <input type="button" value="6" onclick="setNum(this.value)">
+            <input type="button" value="-" onclick="setNum(this.value)">
+            <input type="button" value="7" onclick="setNum(this.value)">
+            <input type="button" value="8" onclick="setNum(this.value)">
+            <input type="button" value="9" onclick="setNum(this.value)">
+            <input type="button" value="*" onclick="setNum(this.value)">
+            <input type="button" value="C" onclick="xoa()">
+            <input type="button" value="0" onclick="setNum(this.value)">
+            <input type="button" value="=" onclick="ketqua()">
+            <input type="button" value="/" onclick="setNum(this.value)">
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>
