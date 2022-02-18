@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 1" onclick="question1()">
+<input type="button" value="Bài 2" onclick="question2()">
+<input type="button" value="Bài 3" onclick="question3()">
+<input type="button" value="Bài 4" onclick="question4()">
+<input type="button" value="Bài 5" onclick="question5()">
+<script>
+function question1(){
+    let a = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ];
+    for (var i in a)
+    {
+        document.write("row " + i);
+        document.write('<br/>')
+        for (var j in a[i])
+        {
+            document.write(" " + a[i][j]);
+            document.write('<br/>')
+        }
+    }
+}
+function question2(){
+    let array = ['c','s','c','2','6','1'];
+    let a = array.reverse().join("");
+    document.write(a);
+}
+function question3(){
+    
+}
+function  question4(){
+    let array = prompt('Nhập vào chuỗi kí tự: ');
+    document.write(array.split(' ').length );
+
+}
+function question5(){
+
+}
+</script>
+</body>
+</html>

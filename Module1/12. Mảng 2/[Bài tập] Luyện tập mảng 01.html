@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 1" onclick="question1()">
+<input type="button" value="Bài 2" onclick="question2()">
+<input type="button" value="Bài 3" onclick="question3()">
+<input type="button" value="Bài 4" onclick="question4()">
+<input type="button" value="Bài 5" onclick="question5()">
+<input type="button" value="Bài 6" onclick="question6()">
+<input type="button" value="Bài 7" onclick="question7()">
+<input type="button" value="Bài 8" onclick="question8()">
+<input type="button" value="Bài 9" onclick="question9()">
+<script>
+function question1(){
+    let array = [12,1,3,14,7,9,8,2,5,20];
+    for (let i =0;i< array.length; i++){
+        if (array[i] >= 10){
+            document.write(array[i]);
+            document.write('<br/>');
+        }
+    }
+}
+function  question2(){
+    let array = [12,1,3,14,7,9,8,2,5,20];
+    let max = array[0];
+    let index = 0;
+    for (var i = 0; i < array.length; i++){
+        if (array[i] > max){
+            max = array[i];
+            index = i;
+        }
+    }
+    document.write(max);
+    document.write('<br/>');
+    document.write('Vị trí của mảng là: ' + index);
+}
+
+function question3(){
+    let array = [12,1,3,14,7,9,8,2,5,20];
+    let sum = 0;
+    let max = array[0];
+    let index = 0;
+    for (var i = 0; i < array.length; i++) {
+        sum += array[i];
+        if (array[i] > max){
+            max = array[i];
+            index = i;
+        }
+    }
+    document.write('Gía trị lớn nhất của mảng là: '+ max);
+    document.write('<br/>');
+    document.write('Gía trị trung bình của phần tử là: ' + sum/(index+1));
+}
+function question4(){
+    let number = Number(prompt('Số phần tử của mảng: '));
+    let array = new Array(number);
+    let arrayReverse = new Array(number);
+    for (i = 0; i < array.length; i++){
+        array[i] = prompt('Phần tử ' + i + ' của mảng có giá trị là: ');
+    }
+    for (i = 0; i < arrayReverse.length; i++){
+        arrayReverse[i]= array[array.length - i - 1];
+    }
+    document.write(arrayReverse)
+
+}
+
+function  question5(){
+    let array = [1, -5, 7, -9, 5];
+    let number = 0;
+    for (i = 0; i < array.length; i++){
+        if (array[i] < 0){
+            number ++;
+        }
+    }
+    document.write('Số chữ số nguyên âm trong chuỗi là: '+ number);
+}
+
+function question6(){
+    let array = new Array(10);
+    for (i = 0; i < array.length; i++){
+        array[i] = prompt('Phần tử ' + i + ' của mảng có giá trị là: ');
+    }
+    let V = prompt('Nhập vào giá trị của V: ');
+    let x = 0;
+    for (i = 0; i < array.length; i++){
+        if(array[i] = V){
+            x = 1;
+            break;
+        }
+    }
+    if(x == 1){
+        document.write('V is in the array');
+    }
+    else {
+        document.write('V is not in the array');
+    }
+}
+function question7(){
+    let array = new Array(10);
+    for (let i = 0; i < array.length; i++){
+        array[i] = prompt('Phần tử ' + i + ' của mảng có giá trị là: ');
+    }
+    let V = prompt('Nhập vào giá trị của V: ');
+    for (c = i = 0; i < array.length; i++) {
+        if (Array[i] == V) {
+            Array[c] = Array[i];
+            c++;
+        }
+    }
+    document.write(array)
+}
+function question8(){
+    let array = new Array(10);
+    let temp;
+    for (let i = 0; i < array.length; i++){
+        array[i] = prompt('Phần tử ' + i + ' của mảng có giá trị là: ');
+    }
+    for ( let i = 0; i < array.length; i++){
+        for (let j = i + 1; j < array.length; j++){
+            if (array[i] > array[j]){
+                temp = array [i];
+                array[i] =array[j];
+                array[j] = temp
+            }
+        }
+    }
+    document.write(array);
+}
+function question9(){
+    let firstArray = new Array(10);
+    let secondArray = new Array(10);
+    for (let i = 0; i < firstArray.length; i++){
+        firstArray[i] = prompt('Phần tử ' + i + ' của mảng có giá trị là: ');
+    }
+    for (let i = 0; i < secondArray.length; i++){
+        secondArray[i] = prompt('Phần tử ' + i + ' của mảng có giá trị là: ');
+    }
+    let thirdArray = firstArray.concat(secondArray)
+    document.write(thirdArray);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    <input type="text" id="word" >-->
+<!--    <button onclick="convert()">Submit</button>-->
+<input type="text" id="product" placeholder="Enter new product">
+<button onclick="createNewProduct()">ADD</button>
+<div id="content">
+</div>
+</body>
+<script>
+
+    let productList = ["iphone x", "samsung", "xoaimi", "nokia"];
+    //Tạo 1 table.
+    function displayProduct(){
+        let table = '<table border="1px" style="border-collapse: collapse">' +
+            ' <tr> <th>Product Name</th> ' +
+            '<th>Action</th> </tr>';
+        for (let i = 0; i < productList.length; i++) {
+            table += '<tr><td>' + productList[i] + ' </td>' +
+                ' <td> <button onclick="editProduct(' + i + ')">Edit</button> </td>' +
+                ' <td> <button onclick="deleteProduct(' + i + ')">Delete</button> </td>' +
+                ' </tr>';
+        }
+        table += '</table>';
+        document.getElementById("content").innerHTML = table;
+    }
+    //Xóa sản phẩm: Xóa phần tử trong mảng có vị trí index
+    function deleteProduct(index) {
+        productList.splice(index, 1);
+        displayProduct();
+    }
+    function editProduct(index) {
+        //index: vị trí của sản phẩm ở trong Mảng.
+        productList[index] = prompt("Nhập lại tên product muốn chỉnh sửa: ");
+        displayProduct();
+    }
+    //Thêm phần tử mới vào mảng.
+    function createNewProduct() {
+        let product = document.getElementById("product").value;
+        productList.push(product);
+        displayProduct();
+        document.getElementById("product").value = "";
+    }
+    displayProduct();
+</script>
+</html>

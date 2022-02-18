@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 1" onclick="alertMessage()">
+<input type="button" value="Bài 2" onclick="increaseNumber()">
+<input type="button" value="Bài 3" onclick="question3()">
+<input type="button" value="Bài 4" onclick="question4()">
+<input type="button" value="Bài 5" onclick="question5()">
+<script>
+    function alertMessage() {
+        let a = 'Xin chao';
+        document.write(a);
+    }
+
+    function increaseNumber() {
+        let number = prompt('Enter number: ');
+        number++;
+        alert(number);
+    }
+
+    function question3() {
+        let number1 = Number(prompt('Enter number1: '));
+        let number2 = Number(prompt('Enter number2: '));
+        if (number1 > number2) {
+            alert('number 1 is bigger than number 2');
+        } else {
+            alert('Sum of both numbers is: ' + (number2 + number1));
+        }
+    }
+
+    function addNumbers() {
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        return result;
+    }
+
+    function question4() {
+        result = 0;
+        alert(result);
+        result = addNumbers();
+        alert(result);
+    }
+
+
+    function question5() {
+    let array1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let array2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let variable = true;
+
+        let array = prompt('Enter name of star: ');
+        for(let i = 0; i < array1.length; i++){
+            if (array1[i]===array){
+                variable = false;
+                n = i;
+                break;
+            }
+        }
+        while (variable) {
+            let array = prompt('You entered ron star name, please re-enter: ');
+            for(let i = 0; i < array1.length; i++){
+                if (array1[i]===array){
+                    variable = false;
+                    n = i;
+                    break;
+                }
+            }
+        }
+        alert(array1[n] + ' belong to ' + array2[n] + ' Constellation ')
+
+    }
+
+</script>
+</body>
+</html>

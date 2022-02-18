@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Sinh bảng cửu chương</title>
+</head>
+<body>
+<input type="button" value="Bài 1" onclick="question1()">
+<input type="button" value="Bài 2" onclick="question2()">
+<input type="button" value="Bài 3" onclick="question3()">
+<input type="button" value="Bài 4" onclick="question4()">
+<input type="button" value="Bài 5" onclick="question5()">
+<input type="button" value="Bài 6" onclick="question6()">
+<input type="button" value="Bài 7" onclick="question7()">
+
+<script>
+function question1(){
+    for ( let i=1;i<=100;i++){
+        document.write(i);
+        document.write("<br/>");
+        if(i==99){
+            alert("Đã hoàn thành");
+        }
+    }
+
+}
+
+function question2(){
+    let i = Number(prompt("Nhập nhiệt độ: "));
+    if (i < 20){
+        alert("Hãy tăng nhiệt độ");
+    }
+    if (i > 100){
+        alert("Hãy hạ nhiệt độ")
+    }
+}
+
+function question3(){
+    let firstTerm = 0;
+    let secondTerm = 1;
+    let nextTerm
+    for (i = 0; i <=19; i++){
+        document.write(firstTerm);
+        document.write("<br/>");
+        nextTerm = firstTerm + secondTerm;
+        firstTerm = secondTerm;
+        secondTerm = nextTerm;
+    }
+}
+
+function question4(){
+    let firstTerm = 0;
+    let secondTerm = 1;
+    let nextTerm;
+    while (true){
+        if (firstTerm % 5 == 0){
+            alert('số đầu tiên trong dãy Fibonaci chia hết cho 5 là: ' + firstTerm);
+            break;
+        }
+        else {
+            nextTerm = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
+    }
+}
+function question5(){
+    let firstTerm = 0;
+    let secondTerm = 1;
+    let nextTerm;
+    let a = 0;
+    for (i = 0; i <=19; i++) {
+        a += firstTerm
+        nextTerm = firstTerm + secondTerm;
+        firstTerm = secondTerm;
+        secondTerm = nextTerm;
+    }
+    alert('Tổng của 20 số tự nhiên trong dãy Fibonaci là: '+ a);
+}
+function question6(){
+    let number = 0;
+    let total = 0;
+    for (let variable = 0; number<=29; variable++){
+        if (variable % 7 == 0){
+            number ++;
+            total += variable;
+        }
+    }
+    alert('Tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên là: ' + total);
+}
+function question7(){
+    for (let i = 1; i <= 100; i++){
+        if (i % 3 == 0 && i % 5 == 0){
+            document.write('FizzBuzz');
+        }
+        else if(i % 3 == 0){
+            document.write('Fizz');
+        }
+        else if(i % 5 == 0){
+            document.write('Buzz');
+        }
+        else {
+            document.write(i)
+        }
+        document.write('<br/>')
+    }
+}
+</script>
+</body>
+</html>

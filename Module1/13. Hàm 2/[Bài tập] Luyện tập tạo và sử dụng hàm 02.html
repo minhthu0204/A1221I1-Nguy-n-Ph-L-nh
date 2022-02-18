@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 1" onclick="question1()">
+<input type="button" value="Bài 2" onclick="question2()">
+<input type="button" value="Bài 3" onclick="question3()">
+<input type="button" value="Bài 4" onclick="question4()">
+<input type="button" value="Bài 5" onclick="question5()">
+<input type="button" value="Bài 6" onclick="question6()">
+<input type="button" value="Bài 7" onclick="question7()">
+<input type="button" value="Bài 8" onclick="question8()">
+<input type="button" value="Bài 9" onclick="question9()">
+<script>
+  function question1(){
+      let number =prompt('Enter number: ');
+      alert('square of number: '+ Math.pow(number,2));
+  }
+  function question2(){
+      let radius = prompt('Enter radius: ');
+      alert('Perimeter of the circle: ' + 3.14*2*radius);
+      alert('Acreage of the circle: ' + 3.14*Math.pow(radius,2));
+
+  }
+  function question3(){
+      let number = prompt('Enter number: ');
+      let result = 1;
+      for(let i = number; i > 0; i--){
+          result *= i;
+      }
+      alert('factorial of the number is: '+ result);
+
+  }
+  function question4(){
+      let array =['0','1','2','3','4','5','6','7','8','9'];
+      let character = prompt('Enter the character: ');
+      let result = false;
+      for (let i = 0; i < array.length; i++){
+          if (character==array[i]){
+                result = true;
+                break;
+          }
+          alert(result);
+          return result;
+      }
+
+
+  }
+  function question5(){
+      let number1 = Number(prompt('Nhập số đầu tiên: '));
+      let number2 = Number(prompt('Nhập số thứ 2: '));
+      let number3 = Number(prompt('Nhập số thứ 3: '));
+      let min = number1;
+      if(number1 > number2){
+        number2 = min;
+      }
+      else if (number2 > number2){
+          number3 = min;
+      }
+      alert(min);
+  }
+  function question6(){
+      let number = Number(prompt('Nhập số: '));
+      let result = false;
+      if(number >= 0){
+          result = true;
+      }
+      alert(result);
+      return result;
+  }
+  function question7(){
+      let number1 = Number(prompt('Nhập số đầu tiên: '));
+      let number2 = Number(prompt('Nhập số thứ 2: '));
+      let temp = number1;
+      number1 = number2;
+      number2 = temp;
+      alert(' số đầu tiên là' + number1);
+      alert(' số thứ 2 là' + number2);
+
+  }
+  function  question8(){
+      let number = Number(prompt('Số phần tử của mảng: '));
+      let array = new Array(number);
+      let arrayReverse = new Array(number);
+      for (i = 0; i < array.length; i++){
+          array[i] = prompt('Phần tử ' + i + ' của mảng có giá trị là: ');
+      }
+      for (i = 0; i < arrayReverse.length; i++){
+          arrayReverse[i]= array[array.length - i - 1];
+      }
+      document.write(arrayReverse);
+  }
+  function question9(){
+    let array = prompt('Enter the string: ');
+    let splitArray = array.split('');
+    let character = prompt('Enter the character: ');
+    let cout = 0;
+    let test = false;
+    let a;
+    for (let i = 0; i < splitArray.length; i++ ){
+        if (character === splitArray[i]){
+            cout ++;
+            test = true;
+        }
+    }
+    if (test){
+        alert(cout);
+        a = cout;
+    }
+    else {
+        alert('-1');
+        a = -1;
+    }
+    return a;
+  }
+
+</script>
+</body>
+</html>

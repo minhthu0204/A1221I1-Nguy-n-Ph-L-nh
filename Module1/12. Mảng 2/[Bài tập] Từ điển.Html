@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ta = ['one', 'two', 'three'];
+    let tv = ['một', 'hai', 'ba'];
+
+function findByName(){
+    let keyWord = prompt(' Nhập vào từ cần dịch: ');
+    for (let i = 0; i < ta.length; i++){
+        if(tv[i] == keyWord){
+            return i;
+        }
+        else {
+            return -1;
+        }
+    }
+}
+function translate(){
+    let i = findByName();
+    if(i == -1){
+        alert(' không tìm được từ cần dịch:')
+    }
+    else {
+        alert('từ tường ứng là: '+ ta[i]);
+    }
+}
+translate();
+</script>
+</body>
+</html>

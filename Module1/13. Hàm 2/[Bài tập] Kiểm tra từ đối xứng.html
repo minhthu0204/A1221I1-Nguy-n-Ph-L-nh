@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+        let array = prompt('Enter the  string that you want to check: ');
+        let splitArray = array.split('');
+        let result;
+        for(let i = 0; i <= Math.floor(splitArray.length/2); i++ ){
+            if (splitArray[i]===splitArray[array.length - i -1]){
+                result = true;
+            }
+            else {
+                result= false;
+                break;
+            }
+        }
+        alert(result);
+
+    
+
+
+</script>
+</html>
