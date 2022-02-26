@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+class Temperature {
+    constructor(temperature) {
+        this.temperature = temperature;
+    }
+
+    temperatureConverseF(){
+        return (this.temperature*9)/5 + 32;
+    }
+
+    temperatureConverseK(){
+        return this.temperature - 273.15;
+    }
+}
+let temperature = new Temperature(25);
+document.write(temperature.temperatureConverseF());
+document.write('<br\>');
+document.write(temperature.temperatureConverseK());
+</script>
+</body>
+</html>
