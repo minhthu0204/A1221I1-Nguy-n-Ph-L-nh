@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ tam giác vuông cân rỗng có chiều cao h.</title>
+</head>
+<body>
+<script>
+    let h = Number(prompt('Nhập chiều cao h: '));
+for ( i = 1; i <= h; i++){
+    for (j = 1; j < h * 2; j++){
+        if(Math.abs(5 - j) <= (i - 1)){
+            document.write('*');
+        }
+        else {
+            document.write('&nbsp&nbsp')
+        }
+    }
+    document.write('<br\>')
+}
+</script>
+</body>
+</html>

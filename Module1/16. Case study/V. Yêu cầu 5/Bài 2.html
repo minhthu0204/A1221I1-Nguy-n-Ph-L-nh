@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = Number(prompt('Nhập vào chiều ngang ma trận:'));
+    let column = Number(prompt('Nhâp vào chiều dài ma trận: '));
+    let matrix = new Array();
+    let count = 0;
+    function checkPrime(number){
+        let temp = true;
+        if (number < 2){
+            temp = false;
+        }
+        else if(number > 2){
+            for (let i = 2; i < number; i++){
+                if(number % i == 0){
+                    temp = false;
+                }
+            }
+        }
+        return temp;
+
+    }
+    for (let i = 0; i < row; i++){
+        matrix[i] = new Array();
+        for (let j = 0; j < column; j++){
+            matrix[i][j] = Number(prompt('Nhập vào phần tử matrix['+ i +'][' + j + '] của ma trận: '));
+        }
+    }
+
+    for  (let i = 0; i < row; i++){
+        for (let j = 0; j < column; j++ ) {
+        if(checkPrime(matrix[i][j])){
+            count ++;
+            document.write(matrix[i][j]);
+            document.write('<br/>');
+        }
+        }
+    }
+    document.write('số số nguyên tố là: '+ count);
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let firstArray = ['0','1','2','3','4','5','6','7','8','9'];
+    let secondArray =['không ', 'một ', 'hai ','ba ','bốn ','năm ','sáu ', 'bảy ','tám ','chín '];
+    let characters = prompt('Nhập vào dãy số: ');
+    let result = [];
+    for (let i = 0; i < characters.length; i++ ){
+        for (let j = 0; j < 10; j++){
+            if (characters[i] === firstArray[j]) {
+                result.push(secondArray[j]);
+            }
+        }
+    }
+    let finalResult = result.join('');
+    document.write(finalResult);
+</script>
+</body>
+</html>

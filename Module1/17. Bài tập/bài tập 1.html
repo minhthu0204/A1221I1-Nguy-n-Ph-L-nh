@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1</title>
+</head>
+<body>
+<h1>Add New Product</h1>
+<br>
+<input type="text" placeholder="New Product" id="New Product">
+<input type="button" value="Add" onclick="addProduct()">
+<br>
+<h1>Display All Product</h1>
+<p>Product Name</p>
+<div id="result"></div>
+
+
+<script>
+    let productList = ['Nokia','Iphone','SamSung','Xiaomi'];
+    displayProduct();
+    function displayProduct(){
+        let result = '';
+        result += '<table border="1 px" style="border-collapse: collapse">';
+        for (let i = 0; i <  productList.length; i++ ){
+            result += '<tr><td>' + (i+1) + '</td><td>' + productList[i] + '</td>' +
+                '<td><input type="button" value="Edit" onclick="editProduct('+ i +')"></td><td><input type="button" value="Delete" onclick="deleteProduct('+ i +')"></td></tr>';
+        }
+        result += '</table>';
+        document.getElementById('result').innerHTML = result;
+    }
+
+    function addProduct() {
+        let productName = document.getElementById('New Product').value;
+        productList.push(productName);
+        displayProduct();
+    }
+
+    function editProduct(index) {
+        productList[index] = prompt("Nhập lại tên product muốn chỉnh sửa: ");
+        displayProduct();
+    }
+
+    function deleteProduct(index) {
+        productList.splice(index, 1);
+        displayProduct();
+    }
+</script>
+</body>
+</html>

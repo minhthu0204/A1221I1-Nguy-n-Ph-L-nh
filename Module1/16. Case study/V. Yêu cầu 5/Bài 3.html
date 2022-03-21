@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = Number(prompt('Nhập vào chiều ngang ma trận:'));
+    let column = Number(prompt('Nhâp vào chiều dài ma trận: '));
+    let matrix = new Array();
+    let sum = 0;
+    for (let i = 0; i < row; i++) {
+        matrix[i] = new Array();
+        for (let j = 0; j < column; j++) {
+            matrix[i][j] = Number(prompt('Nhập vào phần tử matrix[' + i + '][' + j + '] của ma trận: '));
+        }
+    }
+    let max = matrix[0][0];
+    let min = matrix[0][0];
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j < column; j++) {
+            if (min > matrix[i][j]) {
+                min = matrix[i][j];
+            }
+        }
+    }
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j < column; j++) {
+            if (max < matrix[i][j]) {
+                max = matrix[i][j];
+            }
+        }
+    }
+    document.write('Phần tử nhỏ nhất trong ma trận là: ' + min);
+    document.write('<br/>');
+    document.write('Phần tử lớn nhất trong ma trận là: ' + max);
+
+</script>
+</body>
+</html>

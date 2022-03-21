@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let array = prompt('Nhâp vào chuỗi kí tự   : ');
+    let result = [];
+    for(let i = 0; i < array.length; i++){
+        let temp = true;
+        for (let j = 0; j < result.length; j++){
+            if (array[i] === result[j]){
+                temp = false;
+            }
+        }
+        if(temp){
+           result.push(array[i]);
+           count ++;
+        }
+    }
+    document.write(result);
+    document.write('<br\>');
+    document.write(result.length );
+</script>
+</body>
+</html>

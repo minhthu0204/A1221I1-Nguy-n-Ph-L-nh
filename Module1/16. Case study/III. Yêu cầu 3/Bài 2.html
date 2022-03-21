@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let firstNumber = Number(prompt('Số phần tử của mảng đầu tiên: '));
+    let firstArray = new Array(firstNumber);
+    for (let i = 0; i < firstNumber; i++){
+        firstArray[i] = Number(prompt('Phần tử ' + i + ' của mảng có giá trị là: '));
+    }
+    let secondNumber = Number(prompt('Số phần tử của mảng đầu tiên: '));
+    let secondArray = new Array(secondNumber);
+    for (let i = 0; i < secondNumber; i++){
+        secondArray[i] = Number(prompt('Phần tử ' + i + ' của mảng có giá trị là: '));
+    }
+
+    let result = [];
+
+    for (let i = 0; i < secondArray.length; i++) {
+        let isExist = false;
+        for (let j = 0; j < firstArray.length; j++) {
+            if (secondArray[i] === firstArray[j]) {
+                isExist = true;
+                break;
+            }
+        }
+        if (!isExist) {
+            result.push(secondArray[i]);
+        }
+    }
+
+    document.write(result);
+</script>
+</body>
+</html>

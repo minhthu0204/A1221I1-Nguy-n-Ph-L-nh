@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2</title>
+</head>
+<body>
+<script>
+function kiemTraPhanSo(){
+    let tuSoA= Number(prompt('Nhập vào tử số của phân số đầu tiên:'));
+    let mauSoA= Number(prompt('Nhập vào mẫu số của phân số đầu tiên:'));
+    let tuSoB= Number(prompt('Nhập vào tử số của phân số thứ 2:'));
+    let mauSoB= Number(prompt('Nhập vào mẫu số của phân số thứ 2:'));
+
+    if((tuSoA*mauSoB) ===(tuSoB*mauSoA)){
+        document.write('Hai phân số bằng nhau');
+        return true;
+
+    }
+    else {
+        document.write('Hai phân số không bằng nhau');
+        return false;
+    }
+}
+kiemTraPhanSo();
+</script>
+</body>
+</html>

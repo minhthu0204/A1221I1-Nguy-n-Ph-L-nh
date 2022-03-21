@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<h1>Thông tin sổ tiết kiệm</h1>
+<input type="button" value="Thêm" onclick="addSaving()">
+<input type="button" value="Xóa" onclick="deleteSaving()">
+<p id="result"></p>
+<script>
+    class Saving {
+        constructor(code, type, name, ID , date , money) {
+            this.code = code;
+            this.type = type;
+            this.name = name;
+            this.ID = ID;
+            this.date = date;
+            this.money = money;
+        }
+
+        getCode() {
+            return this.code;
+        }
+
+        getType() {
+            return this.type;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getID() {
+            return this.ID;
+        }
+
+        getDate() {
+            return this.date;
+        }
+
+        getMoney() {
+            return this.money;
+        }
+
+        setCode(code) {
+            this.code = code;
+        }
+
+        setType(type) {
+            this.type = type;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setID(ID) {
+            this.ID = ID;
+        }
+
+        setDate(date) {
+            this.date = date;
+        }
+
+        setMoney(money) {
+            this.money = money;
+        }
+    }
+
+    let arr = [];
+    let code, type, name, date, money;
+
+    function addSaving() {
+        let soTietKiem = new Saving();
+        let check = false;
+        do {
+            code = prompt("Nhập vào mã sổ: ");
+            for (let i = 0; i < arr.length; i++) {
+                if (code === arr[i].getID()) {
+                    alert("đã tồn tại");
+                    check = true;
+                    break;
+                }
+            }
+            if (code.length > 5) {
+                alert("Mã sổ tối đa 5 kí tự \n Hãy nhập lại mã sổ");
+            } else {
+                soTietKiem.setCode(code);
+            }
+        } while (code.length > 5);
+
+        if (!check) {
+
+            do {
+                type = prompt("Nhập vào tên loại tiết kiệm: ");
+                if (type.length > 10) {
+                    alert("Tên loại tiết kiệm tối đa 10 kí tự \n Hãy nhập lại tên loại tiết kiệm");
+                } else {
+                    soTietKiem.setType(type);
+                }
+            } while (type.length > 10);
+
+            do {
+                name = prompt("Nhập vào họ tên khách hàng: ");
+                if (name.length > 30) {
+                    alert("Họ tên tối đa 30 kí tự \n Hãy nhập lại họ tên");
+                } else {
+                    soTietKiem.setName(name);
+                }
+            } while (name.length > 30);
+
+            soTietKiem.setID(Number(prompt("Nhập vào số chứng minh nhân dân: ")));
+
+            soTietKiem.setDate(prompt("Nhập vào ngày mở sổ: "));
+
+            soTietKiem.setMoney(Number(prompt("Nhập vào số tiền gửi: ")));
+
+            arr.push(soTietKiem);
+            display();
+        }
+    }
+
+    function display() {
+        let result = '<table border="1" style="border-collapse: collapse">\n' +
+            '<tr>\n' +
+            '<th>Mã sổ</th>\n' +
+            '<th>Loại tiết kiệm</th>\n' +
+            '<th>Họ tên khách hàng</th>\n' +
+            '<th>Chứng minh nhân dân</th>\n' +
+            '<th>Ngày mở sổ</th>\n' +
+            '<th>Số tiền gửi</th>\n' +
+            '</tr>';
+        for (let i = 0; i < arr.length; i++) {
+            result += '<tr> \n' +
+                '<td>' + arr[i].getCode() + '</td>\n' +
+                '<td>' + arr[i].getType() + '</td>\n' +
+                '<td>' + arr[i].getName() + '</td>\n' +
+                '<td>' + arr[i].getID() + '</td>\n' +
+                '<td>' + arr[i].getDate() + '</td>\n' +
+                '<td>' + arr[i].getMoney() + '</td>\n' +
+                '</tr>';
+        }
+        result += '</tabel>';
+        document.getElementById("result").innerHTML = result;
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let characters = prompt('Nhập vào chuỗi ký tự');
+  let firstResult = '';
+  let result = '';
+  for (let i = 0; i < characters.length; i++){
+    if(!(characters.charAt(i)=== ' '&&characters.charAt(i-1)== ' ')){
+      firstResult += characters.charAt(i);
+    }
+  }
+  firstResult = firstResult.toLowerCase();
+  for (let i = 0; i < firstResult.length; i++){
+    if(i == 0 || firstResult.charAt(i - 1) === ' '){
+      result += firstResult.charAt(i).toUpperCase();
+    } else {
+      result += firstResult.charAt(i);
+    }
+  }
+  document.write(result);
+</script>
+</body>
+</html>

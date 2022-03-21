@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prefix sums </title>
+</head>
+<body>
+<script>
+    let number = Number(prompt('Số phần tử của mảng: '));
+    let array = new Array(number);
+    for (let i = 0; i < number; i++){
+        array[i] = Number(prompt('Phần tử ' + i + ' của mảng có giá trị là: '));
+    }
+    let secondArray = new Array(number);
+    for (let i = 0; i < number; i++){
+        let temp = 0;
+        for (let j = 0; j <= i; j++ ){
+            temp += array[j];
+        }
+        secondArray[i] = temp;
+    }
+    document.write(array);
+    document.write('<br\>')
+    document.write(secondArray);
+
+</script>
+</body>
+</html>

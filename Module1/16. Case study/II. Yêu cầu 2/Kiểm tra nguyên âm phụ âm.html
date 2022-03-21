@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra nguyên âm phụ âm</title>
+</head>
+<body>
+<script>
+    let array = ['o', 'u', 'i', 'a', 'e', 'O', 'U', 'I', 'A', 'E'];
+    let character = prompt('Nhập kí tự cần kiểm tra: ');
+    let temp = false;
+    for (let i = 0; i < array.length; i++){
+        if (character === array[i]){
+            temp = true;
+            break;
+        }
+    }
+    if (temp){
+        document.write('Kí tự là nguyên âm');
+    }
+    else {
+        document.write('Kí tự là phụ âm');
+    }
+</script>
+</body>
+</html>

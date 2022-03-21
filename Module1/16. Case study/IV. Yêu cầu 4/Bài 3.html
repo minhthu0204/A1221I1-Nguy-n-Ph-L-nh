@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let first = prompt('Nhập chuỗi ký tự đầu tiên: ');
+    let second = prompt('Nhập chuỗi ký tự thứ hai: ');
+    let firstCharacters = first.split("");
+    let secondCharacters = second.split("");
+    let count = 0 ;
+    for (let i = 0; i < firstCharacters.length; i++){
+        for (let j = 0; j < secondCharacters.length; j++){
+            if (firstCharacters[i] === secondCharacters[j] ){
+                secondCharacters.splice(j, 1);
+                count++ ;
+                break;
+            }
+        }
+    }
+    document.write(count);
+</script>
+</body>
+</html>
