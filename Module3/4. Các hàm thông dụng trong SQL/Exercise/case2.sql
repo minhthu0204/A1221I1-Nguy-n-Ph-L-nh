@@ -70,6 +70,24 @@ from khach_hang;
 select distinct ho_ten
 from khach_hang;
 
+select hop_dong.ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, count(ma_dich_vu_di_kem) as so_luong_dich_vu_di_kem 
+from hop_dong 
+join hop_dong_chi_tiet on hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
+group by ma_hop_dong;
+
+
+select dich_vu_di_kem.ma_dich_vu_di_kem, ten_dich_vu_di_kem,gia,don_vi,trang_thai
+from dich_vu_di_kem
+join hop_dong_chi_tiet on hop_dong_chi_tiet.ma_dich_vu_di_kem = dich_vu_di_kem.ma_dich_vu_di_kem
+join hop_dong on hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
+join khach_hang on khach_hang.ma_khach_hang = hop_dong.ma_khach_hang
+join loai_khach on loai_khach.ma_loai_khach = khach_hang.ma_loai_khach
+where ten_loai_khach = 'diamond' and (dia_chi like '%Vinh%' or dia_chi like '%Quảng Ngãi%');
+
+select ma_hop_dong, ho_ten , ho_ten , so_dien_thoai , ten_dich_vu, so_luong_dich_vu_di_kem, tien_dat_coc 
+from nhan_vien 
+
+
 
 
 
