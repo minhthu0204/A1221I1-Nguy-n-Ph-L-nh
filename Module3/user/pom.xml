@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>user-manager</artifactId>
+    <artifactId>user</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>user-manager</name>
+    <name>user</name>
     <packaging>war</packaging>
 
     <properties>
@@ -35,20 +35,20 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
-            <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>jstl</artifactId>
-                <version>1.2</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.29</version>
-            </dependency>
+        </dependency>
 
+    <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>jstl</artifactId>
+        <version>1.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.29</version>
+    </dependency>
     </dependencies>
 
     <build>
