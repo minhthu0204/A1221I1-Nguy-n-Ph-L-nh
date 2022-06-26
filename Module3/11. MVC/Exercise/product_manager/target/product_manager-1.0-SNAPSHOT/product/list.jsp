@@ -21,7 +21,7 @@
         <th>Manufacture</th>
         <th>Actions</th>
     </tr>
-    <c:forEach items='${requestScope["products"]}' var="product">
+    <c:forEach items='${"products"}' var="product">
         <tr>
             <td>${product.id}</td>
             <td>${product.name}</td>
