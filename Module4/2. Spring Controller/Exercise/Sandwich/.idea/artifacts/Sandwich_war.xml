@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Sandwich:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Sandwich</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Sandwich-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Sandwich:war exploded" />
+    </root>
+  </artifact>
+</component>
