@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/bootstrap-4.5.3-dist/css/bootstrap.css">
+</head>
+<body>
+<a href="/create">Create new Product</a>
+<h1>Products</h1>
+<table  class="table ">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Producer</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <th:block th:each="p : ${product}">
+        <tr>
+            <td th:text="${p.id}"></td>
+            <td th:text="${p.name}"></td>
+            <td th:text="${p.price}"></td>
+            <td th:text="${p.description}"></td>
+            <td th:text="${p.producer}"></td>
+            <td><a th:href="@{/edit/__${p.id}__ }">Edit</a></td>
+            <td><a th:href="@{/delete/__${p.id}__ }">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
