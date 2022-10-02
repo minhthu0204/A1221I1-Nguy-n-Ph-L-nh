@@ -1,10 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Create Product</title>
 </head>
 <body>
-$END$
+<h1>Create Product</h1>
+<p>
+    <a href="/list">Back to Product List</a>
+</p>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{create}" th:object="${blog}" method="post" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>
+                Input Name:
+            </td>
+            <td>
+                <input type="text" th:field="*{name}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Input content:
+            </td>
+            <td>
+                <input type="text" th:field="*{content}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Input Description:
+            </td>
+            <td>
+                <input type="text" th:field="*{description}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Input Date:
+            </td>
+            <td>
+                <input type="date" th:field="*{date}">
+            </td>
+        </tr>
+        <tr>
+            <td>Upload Image</td>
+            <td >
+                <input type="file" th:field="*{multipartFile}">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Category</td>
+            <td>
+                <select th:field="*{category}" >
+                    <option th:each="p : ${category}" th:value="${p.categoryId}"
+                            th:text="${p.categoryName}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> <input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

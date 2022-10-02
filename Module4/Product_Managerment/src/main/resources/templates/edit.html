@@ -1,10 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Create Product</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.2.0/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
-$END$
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <h4 style="margin: 30px 0px;" >FORM EDIT</h4>
+
+            <form th:action="@{/update}" th:object="${product}" method="post">
+                <input th:type="hidden" name="id" th:field="*{id}">
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="name">Input Name: </label>
+                        <input type="text" name="name" id="name"
+                               class="form-control" th:field="*{name}">
+                        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color: red">*</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="price">Input Price: </label>
+                        <input type="text" th:field="*{price}" name="price" id="price"
+                               class="form-control" >
+                        <span  th:if="${#fields.hasErrors('price')}" th:errors="*{price}"  style="color: red">*</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="expiryDate">Input Expiry Date: </label>
+                        <input type="date" name="expiryDate" id="expiryDate" class="form-control"
+                               th:field="*{expiryDate}">
+                        <!--                        <span >*</span>-->
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="manufacturer">Input Manufacturer:</label>
+                        <input type="text" name="manufacturer" id="manufacturer" class="form-control"
+                               th:field="*{manufacturer}">
+                        <span th:if="${#fields.hasErrors('manufacturer')}" th:errors="*{manufacturer}"  style="color: red">*</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="category" > Category:</label>
+                        <select th:field="*{category}" name="category" id="category" class="form-control">
+                            <option th:each="p : ${category}" th:value="${p.categoryId}"
+                                    th:text="${p.categoryName}"></option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn btn-success" role="button" type="submit" value="Submit">Create</button>
+                <a href="/list"  class="btn btn-warning" role="button" style="text-decoration: none">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>

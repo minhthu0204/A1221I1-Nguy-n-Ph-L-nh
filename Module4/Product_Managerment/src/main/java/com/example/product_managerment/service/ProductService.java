@@ -22,8 +22,9 @@ public class ProductService implements IProductService {
 
     @Override
     public Optional<Product> findById(int id) {
-        return Optional.empty();
+        return productRepository.findById(id);
     }
+
 
     @Override
     public void save(Product product) {
@@ -33,5 +34,10 @@ public class ProductService implements IProductService {
     @Override
     public void remove(int id) {
     productRepository.deleteById(id);
+    }
+
+    @Override
+    public Page<Product> findAllByNameContaining(String name, Pageable pageable) {
+        return productRepository.findAllByNameContaining(name, pageable);
     }
 }

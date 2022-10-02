@@ -1,11 +1,8 @@
 package com.example.product_managerment.model;
-
-import org.springframework.format.annotation.DateTimeFormat;
-
+import com.example.product_managerment.common.NumberValid;
 import javax.persistence.*;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
-import java.time.LocalDate;
+
 
 @Entity
 public class Product {
@@ -17,7 +14,7 @@ public class Product {
     private String name;
 
 
-    @Min(value = 0, message = "Price must be larger than 0")
+    @NumberValid
     private Double price;
 
 //    @DateTimeFormat(pattern = "yyyy-MM-dd")

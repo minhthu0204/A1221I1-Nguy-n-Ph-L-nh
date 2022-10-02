@@ -14,4 +14,6 @@ public interface IProductService {
     void save(Product product);
 
     void remove(int id);
+
+    Page<Product> findAllByNameContaining(String name , Pageable pageable);
 }

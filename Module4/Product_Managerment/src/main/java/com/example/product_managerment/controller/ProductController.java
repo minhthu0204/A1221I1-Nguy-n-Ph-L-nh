@@ -1,6 +1,4 @@
 package com.example.product_managerment.controller;
-
-import com.example.product_managerment.model.Category;
 import com.example.product_managerment.model.Product;
 import com.example.product_managerment.service.CategoryService;
 import com.example.product_managerment.service.ProductService;
@@ -15,8 +13,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class ProductController {
@@ -28,18 +25,28 @@ public class ProductController {
     private CategoryService categoryService;
 
     @GetMapping("list")
-    public ModelAndView showList(@PageableDefault(value = 5) Pageable pageable) {
+    public ModelAndView showList(@RequestParam("search") Optional<String> search, @PageableDefault(value = 2) Pageable pageable) {
+
+        Page<Product> products;
         ModelAndView modelAndView = new ModelAndView("list");
-        Page<Product> products = productService.findAll(pageable);
-        modelAndView.addObject("product",products);
+
+        if(search.isPresent()){
+            products = productService.findAllByNameContaining(search.get(),pageable);
+            modelAndView.addObject("product",products);
+        } else {
+            products = productService.findAll(pageable);
+            modelAndView.addObject("product",products);
+        }
+
         return  modelAndView;
 
     }
     @GetMapping("/delete/{id}")
-    public String delete(@PathVariable int id){
+    public String delete(@PathVariable("id") int id ){
         productService.remove(id);
         return "redirect:/list";
     }
+
 
 
     @GetMapping("/create")
@@ -49,7 +56,7 @@ public class ProductController {
         return "create";
     }
 
-    @PostMapping("/create")
+    @PostMapping("/save")
     public String save(@ModelAttribute("product") @Validated Product product, BindingResult bindingResult,
                        RedirectAttributes redirectAttributes, Model model) {
         if(bindingResult.hasFieldErrors()){
@@ -62,5 +69,27 @@ public class ProductController {
             return "redirect:/create";
         }
     }
+
+    @GetMapping("/edit/{id}")
+    public String showEditForm(@PathVariable int id, Model model){
+        model.addAttribute("product",productService.findById(id));
+        model.addAttribute("category", categoryService.findAll());
+        return "edit";
+    }
+
+    @PostMapping("/update")
+    public String update(@ModelAttribute("product") @Validated Product product, BindingResult bindingResult,
+                         Model model){
+        if(bindingResult.hasFieldErrors()){
+            model.addAttribute("category", categoryService.findAll());
+            return "edit";
+        }
+        else {
+            productService.save(product);
+            return "redirect:/list";
+        }
+
+    }
+
 
 }

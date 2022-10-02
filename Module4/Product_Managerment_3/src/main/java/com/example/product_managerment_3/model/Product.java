@@ -12,7 +12,7 @@ public class Product {
 
     private Double price;
 
-    private String expiryDay;
+    private String expiryDate;
 
     private String manufacturer;
 
@@ -48,12 +48,12 @@ public class Product {
         this.price = price;
     }
 
-    public String getExpiryDay() {
-        return expiryDay;
+    public String getExpiryDate() {
+        return expiryDate;
     }
 
-    public void setExpiryDay(String expiryDay) {
-        this.expiryDay = expiryDay;
+    public void setExpiryDate(String expiryDate) {
+        this.expiryDate = expiryDate;
     }
 
     public String getManufacturer() {

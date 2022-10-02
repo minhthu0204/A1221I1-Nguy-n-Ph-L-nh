@@ -9,64 +9,69 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>Create Product</h1>
-<p>
-    <a href="/list">Back to Product List</a>
-</p>
-<th:block th:if="${message}">
-    <p th:text="${message}"></p>
-</th:block>
-<form th:action="@{create}" th:object="${product}" method="post">
-    <table class="table ">
-        <tr>
-            <td>
-                Input Name:
-            </td>
-            <td>
-                <input type="text" th:field="*{name}">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Input Price:
-            </td>
-            <td>
-                <input type="number" th:field="*{price}">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Input Expiry Date:
-            </td>
-            <td>
-                <input type="text" th:field="*{expiryDate}">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Input Manufacturer:
-            </td>
-            <td>
-                <input type="text" th:field="*{manufacturer}">
-            </td>
-        </tr>
 
-        <tr>
-            <td>
-                Category:
-            </td>
-            <td>
-                <select th:field="*{category}">
-                    <option th:each="p : ${category}" th:value="${p.categoryId}" th:text="${p.categoryName}"></option>
-                </select>
-            </td>
-        </tr>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
 
-        <tr>
-            <td></td>
-            <td> <input type="submit" value="Submit"></td>
-        </tr>
-    </table>
-</form>
+            <h4 style="margin: 30px 0px;" >FORM CREATE</h4>
+            <th:block th:if="${message}" >
+                <p style="color: green" th:text="${message}"></p>
+            </th:block>
+
+            <form th:action="@{/save}" th:object="${product}" method="post">
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="name">Input Name: </label>
+                        <input type="text" name="name" id="name"
+                               class="form-control" th:field="*{name}">
+                        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color: red">*</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="price">Input Price: </label>
+                        <input type="text" th:field="*{price}" name="price" id="price"
+                               class="form-control" >
+                        <span  th:if="${#fields.hasErrors('price')}" th:errors="*{price}"  style="color: red">*</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="expiryDate">Input Expiry Date: </label>
+                        <input type="date" name="expiryDate" id="expiryDate" class="form-control"
+                               th:field="*{expiryDate}">
+<!--                        <span >*</span>-->
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="manufacturer">Input Manufacturer:</label>
+                        <input type="text" name="manufacturer" id="manufacturer" class="form-control"
+                               th:field="*{manufacturer}">
+                        <span th:if="${#fields.hasErrors('manufacturer')}" th:errors="*{manufacturer}"  style="color: red">*</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="category" > Category:</label>
+                        <select th:field="*{category}" name="category" id="category" class="form-control">
+                            <option th:each="p : ${category}" th:value="${p.categoryId}"
+                                    th:text="${p.categoryName}"></option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn btn-success" role="button" type="submit" value="Submit">Create</button>
+                <a href="/list"  class="btn btn-warning" role="button" style="text-decoration: none">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>

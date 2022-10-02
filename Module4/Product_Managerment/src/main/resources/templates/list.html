@@ -9,8 +9,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
-<a href="/create">Create new Product</a>
+<a href="/create"  class="btn btn-primary">Create new Product</a>
 
+<form>
+    Search by first name:
+    <input name="search" type="text"/>
+    <input type="submit" value="Search"/>
+</form>
 <h1 class="text-bg-danger">Products</h1>
 <table  class="table ">
     <tr>
@@ -31,9 +36,9 @@
             <td th:text="${p.expiryDate}"></td>
             <td th:text="${p.manufacturer}"></td>
             <td th:text="${p.category.categoryName}"></td>
-            <td><a th:href="@{/edit/__${p.id}__ }">Edit</a></td>
+            <td><a th:href="@{/edit/__${p.id}__ }"  class="btn btn-primary">Edit</a></td>
             <td> <a class="btn btn-danger btn-delete" data-bs-toggle="modal"
-                    data-bs-target="#deleteModal" href="" type="button" th:data-id="${p.id}">Delete1</a>
+                    data-bs-target="#deleteModal" href="" type="button" th:data-id="${p.id}">Delete</a>
             </td>
         </tr>
     </th:block>
@@ -60,7 +65,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
-                <a type="button" id="ToastDelete" class="btn btn-danger btn-confirm-delete" href="">Delete</a>
+                <a type="button" class="btn btn-danger btn-confirm-delete" href="">Delete</a>
             </div>
         </div>
     </div>
@@ -70,7 +75,7 @@
     $(".btn-delete").click(function () {
         let id = $(this).data("id");
         $('.btn-confirm-delete').attr("href", "/delete/" + id);
-
+        console.log(id);
     })
 </script>
 

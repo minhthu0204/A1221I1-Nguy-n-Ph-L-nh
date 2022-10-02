@@ -1,10 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <link rel="stylesheet" href="/webjars/bootstrap/5.2.0/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+        .w3-bar-block .w3-bar-item {padding:20px}
+    </style>
 </head>
 <body>
-$END$
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+       class="w3-bar-item w3-button">Close Menu</a>
+    <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
+    <a href="/create" onclick="w3_close()" class="w3-bar-item w3-button">Create</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+        <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+        <div class="w3-right w3-padding-16">Mail</div>
+        <div class="w3-center w3-padding-16">My Food</div>
+    </div>
+</div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+        <th:block th:each="b : ${blog}">
+        <div class="w3-quarter">
+            <img th:src="@{'/img/' + ${b.image}}" alt="Sandwich" style="width:100%">
+            <h3 th:text="${b.image}"></h3>
+            <p th:text="${b.description}"></p>
+            <div sec:authorize="hasRole('ADMIN')"></div>
+            <a sec:authorize="hasRole('ADMIN')" class="btn btn-danger btn-delete" data-bs-toggle="modal"
+                    data-bs-target="#deleteModal" href="" type="button" th:data-id="${b.id}">Delete</a>
+        </div>
+        </th:block>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deleteModal">
+        <div class="modal-dialog">
+            <div class="modal-content" id="form-confirm-delete">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete Blog</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        Are you sure to delete?
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                    <a type="button" id="ToastDelete" class="btn btn-danger btn-confirm-delete" href="">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(".btn-delete").click(function () {
+            let id = $(this).data("id");
+            $('.btn-confirm-delete').attr("href", "/delete/" + id);
+
+        })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Pagination -->
+    <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+            <a th:href="@{'/list'(page=${blog.number - 1})}" th:if="${blog.hasPrevious()}" class="w3-bar-item w3-button w3-hover-black">«</a>
+            <span th:text="${blog.number + 1}" class="w3-bar-item w3-black w3-button"></span>
+            <a th:href="@{'/list'(page=${blog.number + 1})}" th:if="${blog.hasNext()}" class="w3-bar-item w3-button w3-hover-black">»</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-row-padding w3-padding-32">
+        <div class="w3-third">
+            <h3>FOOTER</h3>
+            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+
+        <div class="w3-third">
+            <h3>BLOG POSTS</h3>
+            <ul class="w3-ul w3-hoverable">
+                <li class="w3-padding-16">
+                    <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+                    <span class="w3-large">Lorem</span><br>
+                    <span>Sed mattis nunc</span>
+                </li>
+                <li class="w3-padding-16">
+                    <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+                    <span class="w3-large">Ipsum</span><br>
+                    <span>Praes tinci sed</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="w3-third w3-serif">
+            <h3>POPULAR TAGS</h3>
+            <p>
+                <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+                <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+                <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+                <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+                <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- End page content -->
+</div>
+
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+</script>
+
 </body>
 </html>

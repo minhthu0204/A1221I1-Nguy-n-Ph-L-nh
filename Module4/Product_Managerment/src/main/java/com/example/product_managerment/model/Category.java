@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class Category {
+public class   Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int categoryId;
@@ -13,16 +13,6 @@ public class Category {
 
     private String categoryName;
 
-//    @OneToMany(targetEntity = Product.class)
-//    private List<Product> productList;
-//
-//    public List<Product> getProductList() {
-//        return productList;
-//    }
-//
-//    public void setProductList(List<Product> productList) {
-//        this.productList = productList;
-//    }
 
     public Category() {
     }
