@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="09e9a81c-1361-4572-a7ed-c30801e51c81" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/hit-counter/src/main/java/com/example/hitcounter/controller/CountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/hit-counter/src/main/java/com/example/hitcounter/model/Counter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/hit-counter/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/save-user/src/main/java/com/example/saveuser/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/save-user/src/main/java/com/example/saveuser/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/save-user/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/shoping-cart/src/main/java/com/example/shopingcart/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/shoping-cart/src/main/java/com/example/shopingcart/controller/ShoppingCartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/shoping-cart/src/main/java/com/example/shopingcart/model/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/shoping-cart/src/main/java/com/example/shopingcart/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/shoping-cart/src/main/java/com/example/shopingcart/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/shoping-cart/src/main/java/com/example/shopingcart/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/shoping-cart/src/main/java/com/example/shopingcart/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/shoping-cart/src/main/resources/templates/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/shoping-cart/src/main/resources/templates/error.404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/10.Session and Cookie/Practice/shoping-cart/src/main/resources/templates/shop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/12. jQuerry and AJAX/practice/phone-managerment/src/main/java/com/example/phonemanagerment/Service/ISmartphoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/12. jQuerry and AJAX/practice/phone-managerment/src/main/java/com/example/phonemanagerment/Service/SmartphoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/12. jQuerry and AJAX/practice/phone-managerment/src/main/java/com/example/phonemanagerment/controller/SmartphoneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/12. jQuerry and AJAX/practice/phone-managerment/src/main/java/com/example/phonemanagerment/model/Smartphone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/12. jQuerry and AJAX/practice/phone-managerment/src/main/java/com/example/phonemanagerment/repository/ISmartphoneRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/12. jQuerry and AJAX/practice/phone-managerment/src/main/resources/templates/phones/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/java/com/example/springsercurityexample/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/java/com/example/springsercurityexample/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/java/com/example/springsercurityexample/entity/AppRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/java/com/example/springsercurityexample/entity/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/java/com/example/springsercurityexample/entity/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/java/com/example/springsercurityexample/repository/AppUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/java/com/example/springsercurityexample/repository/UserRoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/java/com/example/springsercurityexample/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/java/com/example/springsercurityexample/util/WebUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/resources/templates/403Page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/resources/templates/UserInfoPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/resources/templates/_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/resources/templates/adminPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/resources/templates/loginPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/resources/templates/logoutSuccessfulPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/15. Spring Sercurity/Spring-Sercurity-Example/src/main/resources/templates/welcomePage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/model/MyUserDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/repository/IBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/repository/ICategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/repository/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/service/IBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/service/ICategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/service/MyUserDetailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/java/com/example/blog/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/6. JPA/Exercise/Blog/src/main/resources/templates/myLogin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/java/com/example/final_exam_prepare/common/NumberConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/java/com/example/final_exam_prepare/common/NumberValid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/java/com/example/final_exam_prepare/common/NumberValidImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/java/com/example/final_exam_prepare/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/java/com/example/final_exam_prepare/dto/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/java/com/example/final_exam_prepare/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/java/com/example/final_exam_prepare/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/java/com/example/final_exam_prepare/repository/ICategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/java/com/example/final_exam_prepare/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/java/com/example/final_exam_prepare/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/java/com/example/final_exam_prepare/service/ICategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/java/com/example/final_exam_prepare/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/java/com/example/final_exam_prepare/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Final_exam_prepare/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Manager_2/src/main/java/com/example/product_manager_2/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Manager_2/src/main/java/com/example/product_manager_2/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Manager_2/src/main/java/com/example/product_manager_2/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Manager_2/src/main/java/com/example/product_manager_2/repository/ICategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Manager_2/src/main/java/com/example/product_manager_2/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Manager_2/src/main/java/com/example/product_manager_2/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Manager_2/src/main/java/com/example/product_manager_2/service/ICategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Manager_2/src/main/java/com/example/product_manager_2/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Manager_2/src/main/java/com/example/product_manager_2/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Manager_2/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/common/NumberConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/common/NumberValid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/common/NumberValidImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/handler/ProductExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/resources/templates/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment_3/src/main/java/com/example/product_managerment_3/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment_3/src/main/java/com/example/product_managerment_3/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment_3/src/main/java/com/example/product_managerment_3/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment_3/src/main/java/com/example/product_managerment_3/repository/ICategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment_3/src/main/java/com/example/product_managerment_3/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment_3/src/main/java/com/example/product_managerment_3/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment_3/src/main/java/com/example/product_managerment_3/service/ICategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment_3/src/main/java/com/example/product_managerment_3/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment_3/src/main/java/com/example/product_managerment_3/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment_3/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/final_exam/src/main/java/com/example/final_exam/controller/ContractController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/final_exam/src/main/java/com/example/final_exam/dto/ContractDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/final_exam/src/main/java/com/example/final_exam/model/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/final_exam/src/main/java/com/example/final_exam/model/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/final_exam/src/main/java/com/example/final_exam/repository/IContractRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/final_exam/src/main/java/com/example/final_exam/repository/IHouseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/final_exam/src/main/java/com/example/final_exam/service/ContractService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/final_exam/src/main/java/com/example/final_exam/service/HouseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/final_exam/src/main/java/com/example/final_exam/service/IContractService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/final_exam/src/main/java/com/example/final_exam/service/IHouseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/final_exam/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Module4/final_exam/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/java/com/example/hoanthiengiohang/HoanThienGioHangApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/java/com/example/hoanthiengiohang/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/java/com/example/hoanthiengiohang/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/java/com/example/hoanthiengiohang/controller/ShoppingCartController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/java/com/example/hoanthiengiohang/model/Cart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/java/com/example/hoanthiengiohang/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/java/com/example/hoanthiengiohang/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/java/com/example/hoanthiengiohang/repository/IProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/java/com/example/hoanthiengiohang/service/IProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/java/com/example/hoanthiengiohang/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/resources/static/img/iphone11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/resources/static/img/iphone12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/resources/static/img/iphone13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/resources/templates/cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/resources/templates/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/resources/templates/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/resources/templates/purchase.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/resources/templates/shop.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/main/resources/templates/sucess.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/13.Session and Cookie/Exercise/HoanThienGioHang/src/test/java/com/example/hoanthiengiohang/HoanThienGioHangApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/17. Spring Boot/Practice/SpringBoot_Customer_Managerment/src/main/java/com/example/springboot_customer_managerment/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module4/17. Spring Boot/Practice/SpringBoot_Customer_Managerment/src/main/java/com/example/springboot_customer_managerment/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/5. Thao tác với CSDL và ORM/Practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module4/5. Thao tác với CSDL và ORM/Practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/7.Validation/Excercise/Form-Validation/src/main/java/com/example/formvalidation/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module4/7.Validation/Excercise/Form-Validation/src/main/java/com/example/formvalidation/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/repository/IProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/java/com/example/product_managerment/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/resources/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module4/Product_Managerment/src/main/resources/templates/list.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Eqsiq0FqsKqf7iDm7NRsaDHsqc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="D:\phulinh\Codegym\Module5\2. Typescript\Practice\Typescript-variable\node_modules\prettier" />
+    <property name="ts.external.directory.path" value="D:\phulinh\Codegym\Module5\2. Typescript\Practice\Typescript-variable\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09e9a81c-1361-4572-a7ed-c30801e51c81" name="Changes" comment="" />
+      <created>1663334579450</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663334579450</updated>
+      <workItem from="1663334580608" duration="1501000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/main.js" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="card border-primary">
+        <h3 class="card-header bg-primary">Parent Component</h3>
+        <div class="card-body">
+          <h4 class="card-title">Student List</h4>
+          <table class="table">
+            <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Gender</th>
+              <th>Point</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr *ngFor="let item of students; let i =index">
+              <td>{{i+1}}</td>
+              <td [ngClass]="item.gender == 1 ? 'txt-color , txt-font-weight': ''">{{item.name}}</td>
+              <td [ngSwitch]="item.gender">
+                <span *ngSwitchCase="0">FeMale</span>
+                <span *ngSwitchCase="1">Male</span>
+                <span *ngSwitchDefault>LGBT</span>
+              </td>
+              <td [ngStyle]="{
+    'color' :  item.point<75 ? 'red' : '',
+    'font-weight': 'bold'
+    }">
+                <span *ngIf="item.point>=75; else elseBlock ">Pass</span>
+                <ng-template #elseBlock>
+                  <span>Fail</span>
+                </ng-template>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+<!--          <button (click)="onToggle()">Click</button>-->
+<!--          <div *ngIf="check">-->
+<!--            <app-angular-pipes-component></app-angular-pipes-component>-->
+<!--          </div>-->
+
+        </div>
+
+      </div>
+    </div>
+    <div class="col-6">
+    <app-detail [inputStudent]="studentDetail"></app-detail>
+
+
+      <app-create (newStudent)="getNewStudent($event)"></app-create>
+    </div>
+  </div>
+
+</div>

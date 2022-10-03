@@ -1,0 +1,54 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Data Input</th>
+    <th>Pipes</th>
+    <th>Data Output</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>1</td>
+    <td>{{dataStr}}</td>
+    <td>uppercase</td>
+    <td>{{dataStr | uppercase}}</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>{{dataStr}}</td>
+    <td>lowercase</td>
+    <td>{{dataStr | lowercase}}</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>{{dataStr}}</td>
+    <td>titlecase</td>
+    <td>{{dataStr | titlecase}}</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>{{dataStr}}</td>
+    <td>slice</td>
+    <td>{{dataStr | slice: 0 :4}}</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>{{dataNumber}}</td>
+    <td>datanumber</td>
+    <td>{{dataNumber | number: '1.3-5'}}</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>{{dataMoney}}</td>
+    <td>currency</td>
+    <td>{{dataMoney | currency: 'VND' : true : '1.0-3'}}</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>{{today}}</td>
+    <td>date</td>
+    <td>{{today | date: 'd/M/yyyy'}}</td>
+  </tr>
+  </tbody>
+</table>
