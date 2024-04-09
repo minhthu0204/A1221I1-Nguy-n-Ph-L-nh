@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Student} from "../student";
+import {StudentService} from "../student.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-detail',
@@ -8,10 +10,13 @@ import {Student} from "../student";
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
-  @Input('inputStudent') studentDetail: Student | undefined;
+  studentDetail: Student| undefined;
+
+  constructor(private _studentService: StudentService,
+              private _activatedRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
+    let index = this._activatedRouter.snapshot.params['index'];
   }
 
 }

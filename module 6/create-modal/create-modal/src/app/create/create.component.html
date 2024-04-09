@@ -1,0 +1,68 @@
+<p>create works!</p>
+<a  class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleCreateModal"
+    style="margin-right:20px "   >Thêm mới</a>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="employeeForm" (ngSubmit)="submit()">
+          <div class="form-group" style="margin-bottom: 10px">
+            <label>Tên</label>
+            <input type="text" class="form-control"  formControlName="name" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 10px">
+            <label>Chứng minh nhân dân: </label>
+            <input type="text" class="form-control" formControlName="cmnd" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 10px">
+            <label>Email</label>
+            <input type="email" class="form-control" required formControlName="email">
+          </div>
+          <div class="form-group" style="margin-bottom: 10px">
+            <label>Ngày sinh</label>
+            <input type="date" placeholder="dd-mm-yyyy" class="form-control" formControlName="birthday" >
+          </div>
+<!--          <div class="form-group" style="margin-top: 10px ">-->
+<!--            <label  >Giới tính:</label>-->
+<!--            <input type="radio" value="0" name="gender" style="margin: 0px 10px "  >Nam-->
+<!--            <input type="radio" value="1" name="gender" style="margin: 0px 10px" >Nữ-->
+<!--          </div>-->
+          <div class="form-group" style="margin-top: 10px ">
+            <label  >Giới tính:</label>
+            <input  class="form-control" type="number" formControlName="gender" >
+          </div>
+
+
+          <div class="form-group" style="margin-top: 10px ">
+            <label  >Username:</label>
+            <input  class="form-control" type="text" formControlName="username" >
+          </div>
+          <div class="form-group" style="margin-top: 10px ">
+            <label  >Password:</label>
+            <input  class="form-control" type="text" formControlName="password"  >
+          </div>
+          <div class="form-group" style="margin-top: 10px ">
+            <label  >Img_url</label>
+            <input  class="form-control" type="text" formControlName="img_url" >
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

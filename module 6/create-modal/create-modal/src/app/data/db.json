@@ -1,0 +1,75 @@
+{
+  "user": [
+    {
+      "username": "ThuDang",
+      "password": "1234"
+    }
+  ],
+  "employees": [
+    {
+      "id": 123,
+      "name": "Nguyễn Trần Thu Đặng",
+      "birthday": "11-12-2023",
+      "user": {
+        "username": "ThuDang",
+        "password": "1234"
+      },
+      "cmnd": "HX0123456",
+      "gender": 1,
+      "email": "thudang@gmail.com",
+      "img_url": "https://inanhtuankhanh.vn/wp-content/uploads/2020/11/ok-1--scaled.jpg"
+    },
+    {
+      "name": null,
+      "birthday": null,
+      "cmnd": null,
+      "gender": null,
+      "email": null,
+      "img_url": null,
+      "id": 124
+    },
+    {
+      "name": "name",
+      "birthday": "2022-11-05",
+      "cmnd": "123",
+      "gender": 1,
+      "email": "phulinhnguyen3@gmail.com",
+      "img_url": "sd",
+      "id": 125
+    },
+    {
+      "name": null,
+      "birthday": null,
+      "cmnd": null,
+      "gender": null,
+      "email": null,
+      "img_url": null,
+      "id": 126
+    },
+    {
+      "name": "name",
+      "birthday": "2022-11-12",
+      "cmnd": "1234",
+      "gender": 1,
+      "email": "phulinhnguyen3@gmail.com",
+      "img_url": "1123",
+      "user": null,
+      "id": 127
+    },
+    {
+      "name": "fbh",
+      "birthday": "2022-11-12",
+      "cmnd": "13243",
+      "gender": 1,
+      "email": "phulinhnguyen3@gmail.com",
+      "img_url": "sdf",
+      "username": "adf",
+      "password": "213cf",
+      "user": {
+        "username": "adf",
+        "password": "213cf"
+      },
+      "id": 128
+    }
+  ]
+}

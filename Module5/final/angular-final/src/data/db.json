@@ -1,0 +1,64 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Phone"
+    },
+    {
+      "id": 2,
+      "name": "TV"
+    }
+  ],
+  "products": [
+    {
+      "name": "Iphone X",
+      "price": 5000000,
+      "description": "256Gbrtyuyui",
+      "category": {
+        "id": 1,
+        "name": "Phone"
+      },
+      "id": 3
+    },
+    {
+      "name": "phulinh",
+      "price": 1234567,
+      "description": "ngu",
+      "category": {
+        "id": 1,
+        "name": "Phone"
+      },
+      "id": 12
+    },
+    {
+      "name": "sdf",
+      "price": 11234567,
+      "description": "addfghfggg",
+      "category": {
+        "id": 1,
+        "name": "Phone"
+      },
+      "id": 15
+    },
+    {
+      "name": "huhu",
+      "price": 12335778,
+      "description": "1111111111",
+      "category": {
+        "id": 1,
+        "name": "Phone"
+      },
+      "id": 16
+    },
+    {
+      "name": "haha",
+      "price": 10000000,
+      "description": "nunujhgfff",
+      "category": {
+        "id": 1,
+        "name": "Phone"
+      },
+      "id": 17
+    }
+  ]
+}

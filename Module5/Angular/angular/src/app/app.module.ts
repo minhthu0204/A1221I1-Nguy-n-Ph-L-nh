@@ -7,6 +7,8 @@ import { AngularPipesComponentComponent } from './angular-pipes-component/angula
 import { DetailComponent } from './detail/detail.component';
 import { CreateComponent } from './create/create.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { StudentListComponent } from './student-list/student-list.component';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,11 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     AngularPipesComponentComponent,
     DetailComponent,
     CreateComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    StudentListComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule
   ],

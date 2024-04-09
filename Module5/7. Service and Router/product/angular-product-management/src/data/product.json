@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": 3,
+      "name": "Oppo",
+      "price": 300,
+      "description": "New"
+    },
+    {
+      "id": 4,
+      "name": "đa",
+      "price": 123,
+      "description": "sdf"
+    }
+  ]
+}

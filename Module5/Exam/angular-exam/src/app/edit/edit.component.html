@@ -1,0 +1,111 @@
+<h1>Tạo sản phẩm mới</h1>
+<form [formGroup]="vehicleForm" (ngSubmit)="updateVehicle(id)">
+  <table>
+    <tr>
+      <td>No:</td>
+      <td><input type="number" formControlName="id"></td>
+
+<!--      <span  style="color: red" *ngIf="name.invalid && (name.touched || name.dirty)">-->
+<!--        <span  style="color: red" *ngIf="name.errors?.required">-->
+<!--          Tên không được để trống-->
+<!--        </span>-->
+<!--      </span>-->
+    </tr>
+    <tr>
+      <td>Type of Vehicle:</td>
+      <td><input type="text" formControlName="type"></td>
+            <span  style="color: red" *ngIf="type.invalid && (type.touched || type.dirty)">
+              <span  style="color: red" *ngIf="type.errors?.required">
+                 Input Require
+              </span>
+            </span>
+    </tr>
+    <tr>
+      <td>Park's Name:</td>
+      <td><input type="text" formControlName="name"></td>
+            <span  style="color: red" *ngIf="name.invalid && (name.touched || name.dirty)">
+              <span  style="color: red" *ngIf="name.errors?.required">
+                Input Require
+              </span>
+            </span>
+    </tr>
+
+    <tr>
+      <td> start</td>
+      <td><select formControlName="start"  [compareWith]="compareObjects">
+        <option *ngFor="let start of starts" [ngValue]="start">{{start.name}}</option>
+      </select></td>
+      <span  style="color: red" *ngIf="start.invalid && (start.touched || start.dirty)" >
+        <span  style="color: red" *ngIf="start.errors?.required">
+          Input Require
+        </span>
+      </span>
+    </tr>
+
+    <tr>
+      <td>end</td>
+      <td><select formControlName="end"  [compareWith]="compareObjects">
+        <option *ngFor="let end of ends" [ngValue]="end">{{end.name}}</option>
+      </select></td>
+            <span  style="color: red" *ngIf="end.invalid && (end.touched || end.dirty)" >
+              <span  style="color: red" *ngIf="end.errors?.required">
+                  Input Require
+              </span>
+            </span>
+    </tr>
+
+    <tr>
+      <td>Phone:</td>
+      <td><input type="number" formControlName="number"></td>
+            <span   style="color: red" *ngIf="number.invalid && (number.touched || number.dirty)">
+              <span  style="color: red" *ngIf="number.errors?.required">
+                Input Require
+              </span>
+              <span  style="color: red" *ngIf="number.errors?.pattern">
+                Number invalid
+              </span>
+            </span>
+    </tr>
+
+    <tr>
+      <td>Email:</td>
+      <td><input type="text" formControlName="email"></td>
+      <span   style="color: red" *ngIf="email.invalid && (email.touched || email.dirty)">
+              <span  style="color: red" *ngIf="email.errors?.required">
+                Input Require
+              </span>
+              <span  style="color: red" *ngIf="email.errors?.email">
+                Number invalid
+              </span>
+            </span>
+    </tr>
+
+    <tr>
+      <td>Time to Start:</td>
+      <td><input type="text" formControlName="timeToStart"></td>
+      <span  style="color: red" *ngIf="timeToStart.invalid && (timeToStart.touched || timeToStart.dirty)" >
+              <span  style="color: red" *ngIf="timeToStart.errors?.required">
+              Input Require
+              </span>
+            </span>
+    </tr>
+
+    <tr>
+      <td>Time To End:</td>
+      <td><input type="text" formControlName="timeToArrive"></td>
+      <span  style="color: red" *ngIf="timeToArrive.invalid && (timeToArrive.touched || timeToArrive.dirty)" >
+              <span  style="color: red" *ngIf="timeToArrive.errors?.required">
+               Input Require
+              </span>
+            </span>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button>Tạo mới</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+

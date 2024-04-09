@@ -1,0 +1,14 @@
+{
+  "employees": [
+    {
+      "id": 123,
+      "name": "Nguyễn Trần Thu Đặng",
+      "birthdate": "11-12-2023",
+      "username": "ThuDang",
+      "cmnd": "HX0123456",
+      "gender": 1,
+      "email": "thudang@gmail.com",
+      "img_url": "https://inanhtuankhanh.vn/wp-content/uploads/2020/11/ok-1--scaled.jpg"
+    }
+  ]
+}

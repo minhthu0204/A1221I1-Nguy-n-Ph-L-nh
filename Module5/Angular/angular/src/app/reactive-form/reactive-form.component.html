@@ -8,18 +8,20 @@
       <div class="form-group">
         <label>Name:</label>
         <input type="text" class="form-group" formControlName="studentName">
-        <span *ngIf="rfStudent.controls.stude"></span>
+        <span *ngIf="rfStudent.controls.studentName.touched && rfStudent.controls.studentName?.invalid"> Required Input</span>
       </div>
 
       <div class="form-group">
-        <label ></label>
+        <label >Gender: </label>
         <input type="number" class="form-group" formControlName="studentGender">
       </div>
 
       <div class="form-group">
-        <label></label>
+        <label>Point: </label>
         <input type="number" class="form-group" formControlName="studentPoint">
       </div>
+
+      <button type="submit" class="btn btn-success">Create</button>
     </form>
   </div>
 </div>

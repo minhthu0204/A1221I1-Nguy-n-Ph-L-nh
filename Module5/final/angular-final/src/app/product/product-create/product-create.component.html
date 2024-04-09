@@ -1,0 +1,65 @@
+<h1>Tạo sản phẩm mới</h1>
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+  <table>
+    <tr>
+      <td>Tên sản phẩm:</td>
+      <td><input type="text" formControlName="name"></td>
+<!--      <span *ngIf="productForm.controls.name.touched && productForm.controls.name?.invalid"-->
+
+<!--            style="color: red">Required Input</span>-->
+      <span  style="color: red" *ngIf="name.invalid && (name.touched || name.dirty)">
+        <span  style="color: red" *ngIf="name.errors?.required">
+          Tên không được để trống
+        </span>
+      </span>
+    </tr>
+    <tr>
+      <td>Giá sản phẩm</td>
+      <td><input type="number" formControlName="price"></td>
+<!--      <span *ngIf="productForm.controls.price.touched && productForm.controls.price?.invalid"-->
+
+<!--            style="color: red">Required Input</span>-->
+<!--      <span *ngIf="productForm.controls.price.errors?.min"> lala</span>-->
+      <span  style="color: red" *ngIf="price.invalid && (price.touched || price.dirty)" >
+        <span  style="color: red" *ngIf="price.errors?.required">
+          Giá tiền không được để trống
+        </span>
+        <span  style="color: red" *ngIf="price.errors?.min">
+          Giá tiền nhỏ nhất là 150000
+        </span>
+      </span>
+
+    </tr>
+    <tr>
+      <td>Mô tả về sản phẩm</td>
+      <td><input type="text" formControlName="description"></td>
+      <span   style="color: red" *ngIf="description.invalid && (description.touched || description.dirty)">
+        <span  style="color: red" *ngIf="description.errors?.required">
+          Chi tiết sản phẩm không được để trống
+        </span>
+        <span  style="color: red" *ngIf="description.errors?.minlength">
+          Chi tiết sản phẩm phải có ít nhất 10 ký tự
+        </span>
+      </span>
+    </tr>
+    <tr>
+      <td>Danh mục sản phẩm</td>
+      <td><select formControlName="category">
+        <option selected [value]="null" disabled>Chọn danh mục sản phẩm</option>
+        <option *ngFor="let category of categories" [ngValue]="category">{{category.name}}</option>
+      </select></td>
+      <span  style="color: red" *ngIf="category.invalid && (category.touched || category.dirty)" >
+        <span  style="color: red" *ngIf="category.errors?.required">
+          Loại sản phẩm không được để trống
+        </span>
+      </span>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button>Tạo mới</button>
+      </td>
+    </tr>
+  </table>
+</form>
+

@@ -1,0 +1,41 @@
+{
+  "starts": [
+    {
+      "id": 1,
+      "name": "Đà Nẵng"
+    },
+    {
+      "id": 2,
+      "name": "Huế"
+    }
+  ],
+  "ends": [
+    {
+      "id": 1,
+      "name": "Quảng Trị"
+    },
+    {
+      "id": 2,
+      "name": "Quảng Nam"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": 323,
+      "type": "Giuong ngoi",
+      "name": "mai linh",
+      "start": {
+        "id": 2,
+        "name": "Huế"
+      },
+      "end": {
+        "id": 2,
+        "name": "Quảng Nam"
+      },
+      "number": "0908887233",
+      "email": "phulinhnguyen3@gmail.com",
+      "timeToStart": 323,
+      "timeToArrive": 323
+    }
+  ]
+}

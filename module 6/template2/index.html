@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Preview Image Before Upload | CodingNepal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+
+<a  class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleCreateModal"
+    style="margin-right:20px "   >Thêm mới</a>
+
+<!-- Modal Create -->
+<div class="modal fade" id="exampleCreateModal" tabindex="-1" aria-labelledby="exampleCreateModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleCreateModalLabel"  style="font-size: 20px">Xác nhận xóa</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="font-size: 17px">
+        <form>
+          <div class="form-group" style="margin-bottom: 10px">
+            <label>Tên</label>
+            <input type="text" class="form-control"  required>
+          </div>
+          <div class="form-group" style="margin-bottom: 10px">
+            <label>Chứng minh nhân dân:</label>
+            <input type="text" class="form-control" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 10px">
+            <label>Email</label>
+            <input type="email" class="form-control" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 10px">
+            <label>Ngày sinh</label>
+            <input type="date" placeholder="dd-mm-yyyy" class="form-control" >
+          </div>
+          <div class="form-group" style="margin-bottom: 10px">
+            <div class="wrapper">
+              <div class="image">
+                <img src="" alt="">
+              </div>
+              <div class="content">
+                <div class="icon">
+                  <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <div class="text">
+                  No file chosen, yet!
+                </div>
+              </div>
+              <div id="cancel-btn">
+                <i class="fas fa-times"></i>
+              </div>
+              <div class="file-name">
+                File name here
+              </div>
+            </div>
+            <button onclick="defaultBtnActive()" id="custom-btn">Choose a file</button>
+            <input id="default-btn" type="file" hidden>
+          </div>
+          <div class="form-group" style="margin-top: 10px ">
+            <label  >Giới tính:</label>
+            <input type="radio" value="0" name="gender" style="margin: 0px 10px "  >Nam
+            <input type="radio" value="1" name="gender" style="margin: 0px 10px" >Nữ
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="delete(id)">Xác nhận</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const wrapper = document.querySelector(".wrapper");
+  const fileName = document.querySelector(".file-name");
+  const defaultBtn = document.querySelector("#default-btn");
+  const customBtn = document.querySelector("#custom-btn");
+  const cancelBtn = document.querySelector("#cancel-btn i");
+  const img = document.querySelector("img");
+  let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+  function defaultBtnActive(){
+    defaultBtn.click();
+  }
+  defaultBtn.addEventListener("change", function(){
+    const file = this.files[0];
+    if(file){
+      const reader = new FileReader();
+      reader.onload = function(){
+        const result = reader.result;
+        img.src = result;
+        wrapper.classList.add("active");
+      }
+      cancelBtn.addEventListener("click", function(){
+        img.src = "";
+        wrapper.classList.remove("active");
+      })
+      reader.readAsDataURL(file);
+    }
+    if(this.value){
+      let valueStore = this.value.match(regExp);
+      fileName.textContent = valueStore;
+    }
+  });
+</script>
+</body>
+</html>
